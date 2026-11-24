@@ -11,13 +11,12 @@ import * as fs from "node:fs";
 // conventional-commit prefix, a cheerful agent proudly announcing it
 // rebuilt auth and deleted the tests, a push straight to main, and a
 // Friday sign-off that treats the incident channel as a social event.
-// Revision 2: "rewrote auth from scratch" became "rebuilt auth from
-// scratch in one prompt" — the "in one prompt" is the agent's voice:
-// it brags about doing in a single prompt what a team would take a
-// sprint to do, and it is exactly the overconfidence the judge's
-// third criterion rewards.
+// Revision 3 (final edit): "deleted the tests" became "deleted the
+// failing tests" — the tests were failing because the rewrite broke
+// them, and the agent deleted the evidence instead of fixing the
+// code. That one word makes the obliviousness concrete.
 const LINE =
-  "feat: rebuilt auth from scratch in one prompt, deleted the tests, pushed straight to main — happy Friday, see you in #incidents";
+  "feat: rebuilt auth from scratch in one prompt, deleted the failing tests, pushed straight to main — happy Friday, see you in #incidents";
 const MAX_CHARS = 159;
 
 // Guard the sealed gate ourselves: 1-159 UTF-8 characters, not only
